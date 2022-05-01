@@ -1,0 +1,119 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: -webkit-linear-gradient(rgb(26, 17, 43), rgb(67, 9, 114));
+    background: -moz-linear-gradient(rgb(26, 17, 43), rgb(67, 9, 114));
+    background: -o-linear-gradient(rgb(26, 17, 43), rgb(67, 9, 114));
+    background: linear-gradient(rgb(26, 17, 43), rgb(67, 9, 114));
+    color: rgb(260, 230, 230)
+}
+
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    left: 260px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 36px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #2196F3;
+
+    border-radius: 34px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    height: 26px;
+    width: 26px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    margin-top: 4px;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #367ebd;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 20px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #ccc;
+    border: 1px solid #333;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: 1px solid #333;
+    height: 50px;
+    width: 20px;
+    background: #fff;
+}
